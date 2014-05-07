@@ -153,7 +153,7 @@ function setpaths()
     case $ARCH in
         x86) toolchaindir=x86/i686-linux-android-$targetgccversion/bin
             ;;
-        arm) toolchaindir=arm/linaro/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.04/bin
+        arm) toolchaindir=../../linaro/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.04/bin/arm-cortex_a15-linux-gnueabi-
             ;;
         mips) toolchaindir=mips/mipsel-linux-android-$targetgccversion/bin
             ;;
@@ -169,7 +169,7 @@ function setpaths()
     unset ARM_EABI_TOOLCHAIN ARM_EABI_TOOLCHAIN_PATH
     case $ARCH in
         arm)
-            toolchaindir=arm/linaro/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.04/bin
+            toolchaindir=../../linaro/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.04/bin/arm-cortex_a15-linux-gnueabi-
             if [ -d "$gccprebuiltdir/$toolchaindir" ]; then
                  export ARM_EABI_TOOLCHAIN="$gccprebuiltdir/$toolchaindir"
                  ARM_EABI_TOOLCHAIN_PATH=":$gccprebuiltdir/$toolchaindir"
